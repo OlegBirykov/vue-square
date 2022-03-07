@@ -1,6 +1,17 @@
-# vue-square
+# vue-hello
 
-## Project setup
+
+### Build Status
+
+[![Build status](https://ci.appveyor.com/api/projects/status/7166x1la7u9921ym?svg=true)](https://ci.appveyor.com/project/OlegBirykov/vue-square)
+
+
+### GitHub Pages
+
+https://olegbirykov.github.io/vue-square/
+
+
+### Project setup
 ```
 npm install
 ```
