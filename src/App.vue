@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="columns is-multiline cells-container">
+    <div class="column is-2 cell" v-for="n in 36" :key="n">
+      <Cell state />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Cell from "./components/Cell.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Cell,
   },
 };
 </script>
 
 <style lang="scss">
+@import "bulma/bulma.sass";
+
+$size: 70px;
+
+.body {
+  background-color: lightgray;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns.cells-container {
+  width: $size * 6;
+  margin: auto;
+}
+
+.column.cell {
+  padding: 0;
 }
 </style>
